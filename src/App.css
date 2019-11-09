@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
+
+* { box-sizing: border-box; }
+:root { font-family: 'Open Sans', sans-serif; }
+body { margin: 0; }
+h1,h2,h3 { font-weight: bold; }
+.poolRight{
+  justify-content: end;
+}
+.poolLeft{
+  justify-content: start;
+}
+.d-flex{
+  display: flex;
+}
+.app-wrapper{
+  display: grid;
+  
+  grid-template-areas: 
+      "header header header"
+      "menu content content"
+      "footer footer footer";
+      /* grid-template-areas: "header" " menu content"; */
+    grid-template-rows: 80px 3fr;
+    grid-template-columns: 2fr 10fr;
+     grid-gap: 0.1em;
+    
+    ;
+}
+
+ul.poolRight{
+  display: flex;
+}
+ ul li{
+  list-style: none;
+}
+.wrappContent{
+  margin: 0 auto;
+  background: #2b445a;
+}
+.active{
+  border-bottom: 1px solid;
+}
