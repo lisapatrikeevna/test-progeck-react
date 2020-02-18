@@ -1,23 +1,18 @@
 import React  from 'react';
 import cl from'./css/Profile.module.css';
 import MyPosts from './TemplateProfile/MyPosts/MyPosts';
+import ProfileInfo from './TemplateProfile/ProfileInfo/ProfileInfo';
 
 
-const Profile = () => {
+const Profile = (props) => {
     return(
-        <section className='content d-flex'>
-       
-        <div className={cl .wrappContent}>
-          <div className={cl .main__image}>
-            <img src="http://webstydio.lisa15.ru/image/cache/catalog/demo/product/distancionnoeotkrytiefirmy-500x500.jpg"/>
+      <section className = 'content d-flex'>
+        <div>
+          <div className = {cl .main__image}>
+            <img src="./TemplateProfile/img/8.jpg"/>
           </div>
-          <div className='ava-desc d-flex'>
-          <img src='http://webstydio.lisa15.ru/image/cache/catalog/demo/product/juridicheskoesoprovozhdenie2-74x74.jpg'/>
-            <p>
-              nnnnnn noijj  pkp 
-            </p>
-          </div>
-          <MyPosts/>
+          <ProfileInfo/>
+          <MyPosts postMessage = {props.postMessage} />
         </div>
       </section>
     );
