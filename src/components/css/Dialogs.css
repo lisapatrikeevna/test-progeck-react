@@ -1,0 +1,23 @@
+
+.dialogs{
+    padding: 20px 0;
+    display: grid;
+    grid-template-columns: 2fr 10fr;
+}
+.user-name a{
+    font-size: 17px;
+    margin-right: 50px;
+    margin-left: 20px;
+    line-height: 30px;
+    color: #fff;
+    text-decoration: none;
+}
+.messages-item{
+
+}
+.user-name.active{
+   color: #fff;
+}
+.users__wrepp{
+    
+}

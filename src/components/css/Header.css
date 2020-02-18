@@ -8,13 +8,15 @@
      display: flex!important;
      justify-content: space-between;
      padding: 10px 20px;
-     margin-bottom: 10px;
+     /* margin-bottom: 10px; */
+     background: #632727;
    }
-   ul .contact{
+   ul.contact{
     justify-content: space-between;
-    width: 310px;
+    /* width: 310px; */
    }
    .contact li a{
      color: #fff;
      text-decoration: none;
+     padding: 0 10px;
    }
