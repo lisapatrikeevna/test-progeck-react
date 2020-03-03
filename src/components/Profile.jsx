@@ -12,7 +12,7 @@ const Profile = (props) => {
             <img src="./TemplateProfile/img/8.jpg"/>
           </div>
           <ProfileInfo/>
-          <MyPosts postMessage = {props.postMessage} />
+          <MyPosts postMessage = {props.state.postMessage} addPost = {props.addPost}/>
         </div>
       </section>
     );
