@@ -15,3 +15,16 @@
     font-size: 16px;
     color: tomato;
 } 
+.item img{
+    border-radius: 50%;
+    width: 68px;
+    height: 68px;
+    margin-right: 50px;
+}
+.item{
+    display: flex;
+    align-items: center;
+}
+.ava-desc,.item,.post{
+    padding-left: 20px;
+}

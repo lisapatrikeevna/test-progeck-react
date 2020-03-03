@@ -2,27 +2,31 @@ import React from 'react';
 // import cl from './MyPosts/TemplateProfile/components/css/MyPost.css';
 import cl from './MyPost.module.css';
 import Post from './Post';
-// import crs='<script src="https://kit.fontawesome.com/6978b72a20.js" crossorigin="anonymous"></script>';
-// import FontAwesomeIcon from '@fortawesome/react-fontawesome';
-// import { faCheckSquare, faCoffee } from '@fortawesome/fontawesome-free-solid';
 
+const MyPosts = (props) => {
 
-const MyPosts = () =>{
-    return (
-    <div className={cl .post}>
-      <h2>My Posts</h2> 
+let postsElement = props.postMessage
+.map( (p) => <Post message = {p.message} likesCount = {p.likesCount} /> );
+
+let newPostElement = React.createRef();//создаем ссылку для текстериа
+
+let addPost = () => {
+  let text = newPostElement.current.value;
+  props.addPost(text);
+  newPostElement.current.value = '';
+}
+    return(
+    <div className ={cl .post}>
+      <h2>My Posts</h2>
       <div>
-        <textarea></textarea>
-        <button className={cl .btnAddet}>Add post</button>
+        <textarea ref={newPostElement}></textarea>
+        <button onClick={addPost} className={cl .btnAddet}>Add post</button>
       </div>
-      <div className={cl .posts}>
-        <Post message='Hi, how are you?'/>
-        <Post message= 'Its my first post.'/>
-      </div>
-      <div>
-        {/* <Post count='10'/><span><i class="far fa-thumbs-up"></i></span> */}
+      <div className ={cl .posts}>
+        {/* <Post message={postMessage[0].message } likesCount={postMessage[0].likesCount}/> */}
+        {postsElement}
       </div>
     </div>
     );
 }
- export default MyPosts;
+export default MyPosts;
