@@ -14,4 +14,3 @@ export let rerenderEntireTree = (state) => {
         </BrowserRouter>, document.getElementById('root'));
 }
 
-// export default render;
