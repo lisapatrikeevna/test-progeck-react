@@ -1,6 +1,5 @@
 import {rerenderEntireTree} from '../render';
 
-
 let state = {
     pointBlog: {
         postMessage: [
