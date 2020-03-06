@@ -17,10 +17,6 @@ const App = (props) => {
         <Header/>
         <Navbar />
         <div  className = 'wrappContent'>
-          {/* <Route path ='/dialogs' 
-          render ={ () => 
-          <Dialogs dialogItem={dialogItem} 
-          messageData={messageData}/>  } /> */}
           <Route path ='/dialogs' 
            render ={ () => <Dialogs 
             dialogItem={props.state.pointMessages.dialogItem} 
@@ -28,10 +24,10 @@ const App = (props) => {
           } />
           <Route path ='/profile' 
            render = { () => <Profile 
-            // postMessage= {props.state.pointBlog.postMessage}
-            // pointBlog  ={props.state.pointBlog}
-            state={props.state.pointBlog}
-            addPost={props.addPost} />
+            pointBlog={props.state.pointBlog}
+            addPost={props.addPost} 
+            updateNewPostText = {props.updateNewPostText}
+              />
           }/>
           <Route path = '/news' component = { News }/>
           <Route path ='/music' component = { Music}/>
@@ -43,3 +39,4 @@ const App = (props) => {
 }
 
 export default App;
+
