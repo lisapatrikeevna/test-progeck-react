@@ -7,8 +7,7 @@ const Dialogs = (props) => {
 // debugger; 
 
 let dialogsElements = props.dialogItem
-.map( (dialog) => <DialogData name = {dialog.name} id = {dialog.id} <link rel="manifest" href="//static.lpgenerator.ru/media/pushNotification/manifest.json">
-<script type="text/javascript" src="//static.lpgenerator.ru/media/pushNotification/push.js"></script>/> );
+.map( (dialog) => <DialogData name = {dialog.name} id = {dialog.id} );
 
 let messageElements = props.messageData
 .map( (message) => <MessagesItem message = {message.message} id = {message.id}/> );
