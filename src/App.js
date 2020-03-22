@@ -11,22 +11,18 @@ import Settings from './components/Settings';
 import {BrowserRouter, Route} from "react-router-dom";
 
 const App = (props) => {
-  // debugger; 
+
   return (
       <div className='app-wrapper'>
         <Header/>
         <Navbar />
         <div  className = 'wrappContent'>
           <Route path ='/dialogs' 
-           render ={ () => <Dialogs 
-            dialogItem={props.state.pointMessages.dialogItem} 
-            messageData={props.state.pointMessages.messageData} />  
-          } />
+           render ={ () => <Dialogs  store={props.store} />  } />
           <Route path ='/profile' 
            render = { () => <Profile 
             pointBlog={props.state.pointBlog}
-            addPost={props.addPost} 
-            updateNewPostText = {props.updateNewPostText}
+            dispatch={props.dispatch} 
               />
           }/>
           <Route path = '/news' component = { News }/>
@@ -39,4 +35,3 @@ const App = (props) => {
 }
 
 export default App;
-
