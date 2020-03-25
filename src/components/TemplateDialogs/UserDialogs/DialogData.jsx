@@ -15,7 +15,7 @@ const DialogData = (props) => {
     let path = "/dialogs/" + props.id;
     return(
         <div className = 'user-name'>
-            <NavLink to={path}> {props.name} </NavLink>
+            <NavLink to={path}> {props.name}{props.src} </NavLink>
         </div>
     );
 }
